@@ -1,5 +1,5 @@
 export const registerUserService = (request) => {
-  const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
+  const REGISTER_API_ENDPOINT = '/users/register';
   
   const parameters = {
     method: 'POST',
@@ -19,11 +19,11 @@ export const registerUserService = (request) => {
 };
 
 export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = 'http://localhost:3000/api/v1/login';
+  const LOGIN_API_ENDPOINT = '/users/login';
 
   const parameters = {
     method: 'POST',
-    headers: {
+    headers : {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(request.user)
